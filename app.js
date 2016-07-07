@@ -27,6 +27,9 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/api/whoami', clientDetails);
 
+app.use('/bootstrap', express.static(path.join(__dirname, '/bower_components/bootstrap')));
+app.use('/jquery', express.static(path.join(__dirname, '/bower_components/jquery')));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
