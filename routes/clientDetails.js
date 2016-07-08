@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* Get Client's browser details */
 router.get('/', function(req, res, next) {
-  var ipaddress = (typeof req.headers['x-forwarded-for'] !== "undefined") ? req.headers['x-forwarded-for'] : req.connection.remoteAddress;
+  var ip_address = (typeof req.headers['x-forwarded-for'] !== "undefined") ? req.headers['x-forwarded-for'] : req.connection.remoteAddress;
   var language = req.headers['accept-language'].split(',')[0];
   var browserAndOS = req.headers['user-agent'].split(')')[0];
-  var operatingSystem = browserAndOS.split('(')[1];
+  var operating_system = browserAndOS.split('(')[1];
 
-  res.json({ ipaddress, language, operatingSystem });
+  res.json({ ip_address, language, operating_system });
 });
 
 module.exports = router;

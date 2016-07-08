@@ -1,0 +1,20 @@
+{
+  "name": "headerParser",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Adegbuyi Ademola <marhyorh@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/marhyorh/headerParser",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}
