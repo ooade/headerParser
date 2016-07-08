@@ -5,4 +5,4 @@
 `npm install`
 
 ### HeaderParser
-(http://header-details.herokuapp.com/api/whoami)[HeaderParser] - Ip Address, Language and OS checker
+[http://header-details.herokuapp.com/api/whoami](HeaderParser) - Ip Address, Language and OS checker

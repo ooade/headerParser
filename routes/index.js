@@ -4,7 +4,7 @@ var shorten = require('../controllers/shorten.controller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', { host: req['hostname'] });
 });
 
 router.get('/:shortUrl', function(req, res, next) {
