@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var clientDetails = require('./routes/clientDetails');
 var shorten = require('./routes/shorten');
+var imageSearch = require('./routes/imageSearch');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/s', shorten);
 app.use('/shorten', shorten);
 app.use('/users', users);
 app.use('/api/whoami', clientDetails);
+app.use('/api/imagesearch', imageSearch);
 app.use('/', routes);
 
 app.use('/bootstrap', express.static(path.join(__dirname, '/bower_components/bootstrap')));
