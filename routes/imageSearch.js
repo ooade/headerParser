@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
+var Image = require('../controllers/image.controller');
 
 /** We'll stick to ES5 since we're not transpiling to babel **/
 var BING_API_KEY = "902f50f9ce7d423289d56cad82c5ce50";
@@ -28,6 +29,11 @@ router.get('/:searchQuery', function(req, res, next) {
         };
       });
 
+      /** Once Request Completes
+          Push Requested Image term to DB
+          return the JSON formatted response
+      **/
+      Image.addImageTerm(req, res, searchQuery);
       res.json(result);
     });
 });
