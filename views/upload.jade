@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  p Submit a file to view its file size
+
+  form(action='#', method="POST", enctype="multipart/form-data")
+    input(type="file", name="file")
+    button submit

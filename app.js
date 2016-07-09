@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var clientDetails = require('./routes/clientDetails');
 var shorten = require('./routes/shorten');
 var imageSearch = require('./routes/imageSearch');
+var imageUpload = require('./routes/imageUpload');
 
 var app = express();
 
@@ -28,8 +29,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/s', shorten);
 app.use('/shorten', shorten);
 app.use('/users', users);
+app.use('/image/upload', imageUpload);
 app.use('/api/whoami', clientDetails);
 app.use('/api/imagesearch', imageSearch);
+require('./image')(app);
 app.use('/', routes);
 
 app.use('/bootstrap', express.static(path.join(__dirname, '/bower_components/bootstrap')));
