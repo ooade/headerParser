@@ -1,23 +1,37 @@
 extends layout
 
 block content
-  h4(style='margin-top:2em')
+  h4(style='margin-top:1em')
     b API PROJECTS
     span &nbsp; by &nbsp;
     a(href='http://github.com/marhyorh') Adegbuyi Ademola
   hr
   ul(style='margin-top:1em')
    li.breadcrumb
-    h5
+    h6
       a(href='https://www.freecodecamp.com/challenges/Request%20Header%20Parser%20Microservice') Request Header Parser Microservice
-    p - Grabs user Language, Operating System and IP Address
-    h5 Usage
-    p - http://#{host}/api/whoami
+    p Grabs user Language, Operating System and IP Address
+    b Usage:
+    p http://#{host}/api/whoami
+
     li.breadcrumb
-     h5
+     h6
        a(href='https://www.freecodecamp.com/challenges/url-shortener-microservice') URL Shortener Microservice
-     p - Grabs long url and returns a short one, users can use the short url which redirects them to the long url
-     h5 Usage
-     b To shorten url, you can use any of the two below
-     p - http://#{host}/s/url e.g http://#{host}/s/http://freecodecamp.com
-     p - http://#{host}/shorten/url e.g http://#{host}/shorten/http://freecodecamp.com
+     p Grabs long url and returns a short one, users can use the short url which redirects them to the long url
+     b Usage:
+     p Select your choice:
+     p http://#{host}/s/url e.g http://#{host}/s/http://freecodecamp.com
+     p http://#{host}/shorten/url e.g http://#{host}/shorten/http://freecodecamp.com
+
+   li.breadcrumb
+    h6
+      a(href="https://www.freecodecamp.com/challenges/image-search-abstraction-layer") Image Search Abstraction Layer
+    p An API used to search for images
+    p
+      b Usage:
+    p
+      b Search for images &nbsp;
+      span http://#{host}/api/imagesearch/{image}
+    p
+      b Get recently searched image &nbsp;
+      span http://#{host}/api/latest/imagesearch
